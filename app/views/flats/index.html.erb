@@ -1,0 +1,69 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Flats</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+        <p>All 1 flats.</p>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-4">
+        <div class="flat-card">
+          <div class="flat-card-image" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+          <div class="flat-card-content">
+            <div class="flat-card-title">
+              <h4>Light &amp; Spacious Garden Flat London</h4>
+            </div>
+            <p>10 Clifton Gardens London W9 1DT</p>
+            <div class="flex">
+              <div class="flex">
+                <i class="material-icons mr-2">people</i><span>3</span>
+              </div>
+              <div class="flex ml-3">
+                <i class="material-icons mr-2">euro_symbol</i> 75
+              </div>
+            </div>
+          </div>
+          <div class="flat-card-actions">
+            <a href="/flats/5400">More info</a>
+            <a class="ml-3 text-warning" href="/flats/5400/edit">Edit</a>
+            <a data-confirm="Are you sure?" class="ml-3 text-danger" rel="nofollow" data-method="delete" href="/flats/5400">Remove</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="flat-card">
+          <div class="flat-card-image" style="background-image: url('https://picsum.photos/200/300')"></div>
+          <div class="flat-card-content">
+            <div class="flat-card-title">
+              <h4>Beautiful Home</h4>
+            </div>
+            <p>This is a dangerous place.</p>
+            <div class="flex">
+              <div class="flex">
+                <i class="material-icons mr-2">people</i><span>2</span>
+              </div>
+              <div class="flex ml-3">
+                <i class="material-icons mr-2">euro_symbol</i> 567
+              </div>
+            </div>
+          </div>
+          <div class="flat-card-actions">
+            <a href="/flats/5407">More info</a>
+            <a class="ml-3 text-warning" href="/flats/5407/edit">Edit</a>
+            <a data-confirm="Are you sure?" class="ml-3 text-danger" rel="nofollow" data-method="delete" href="/flats/5407">Remove</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<ul>
+  <% @flats.each do |flat| %>
+    <li><%= link_to flat.name, flat_path(flat) %></li>
+  <% end %>
+</ul>
